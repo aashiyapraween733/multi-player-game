@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Orbit Relay</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <main>
+    <section id="welcome" class="screen welcome">
+      <p class="eyebrow">A tiny live party game</p><h1>ORBIT<br><i>RELAY</i></h1><p class="intro">Spot the signal. Claim it before someone else does.</p>
+      <form id="create-form" class="action-form"><label>Your name<input name="name" maxlength="16" placeholder="Player name" required></label><button>Create room <span>→</span></button></form>
+      <button id="show-join" class="text-button">Join with a room code</button>
+      <form id="join-form" class="join-form hidden"><label>Room code<input name="code" maxlength="4" autocapitalize="characters" placeholder="ABCD" required></label><label>Your name<input name="name" maxlength="16" placeholder="Player name" required></label><button>Join relay <span>→</span></button></form>
+    </section>
+    <section id="game" class="screen game hidden">
+      <header><a href="/" class="brand">ORBIT <i>RELAY</i></a><div class="room-code">ROOM <strong id="room-code">----</strong><button id="copy" title="Copy room code">⧉</button></div></header>
+      <div class="game-layout"><aside><p id="status-label" class="eyebrow">Waiting room</p><h2 id="round-title">Gather your crew.</h2><p id="instruction">Share the room code, then let the host launch the round.</p><button id="start" class="hidden">Start 60 second relay <span>→</span></button><p id="timer" class="timer hidden">01:00</p></aside>
+      <section class="play-area"><div id="board" class="board" aria-label="Signal board"></div><div id="winner" class="winner hidden"></div></section>
+      <aside class="score-panel"><p class="eyebrow">Scoreboard</p><ol id="players"></ol></aside></div>
+    </section>
+  </main><div id="toast" class="toast hidden"></div><script src="/app.js"></script>
+</body></html>
